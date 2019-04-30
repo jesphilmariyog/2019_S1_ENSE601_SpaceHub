@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-            <title>SpaceHub - central hub for space news, events and updates</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+        <meta charset="utf-8" />
+        <title>SpaceHub - central hub for space news, events and updates</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+
     <body>
         
-        <!--The main title for the home page-->
-        <!--The title will be changed to an image for the SpaceHub logo -->
-        <!--Once the logo has been finalised, it should be implemented so that when a user clicks on it, the user 
-            user returns to the home page-->
-        <h1><a href="index.html">SpaceHub</a></h1> <!--For now the heading is semantically set to an anchor element-->
-        
-        <!--Buttons to navigate to the calendar, gallery and login web pages-->
-        <div class="nav-btn-group"> <!--This is the potential navigation bar-->
-            <button type="button" href="calendar.html" name="calendar">Calendar</button>
-            <button type="button" href="gallery.html" name="gallery">Gallery</button>
-            <button type="button" href="login.html" name="login">Login</button>
-            <div class="search-container">
-                <form> <!--Action file required after search has been made-->
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
+        <!--Header and Navigation Bar for the Homepage-->
+        <header>
+            <div class="header-navbar">
+
+                <img class="logo" src="assests/logo.png" alt="SpaceHub Logo">
+
+                <!--This is the navigation elements-->
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </nav>
+
+                <!--Search field to be put here-->
+
             </div>
-        </div>
+        </header>
         
         <!--Main content of the home page-->
         <div> <!--Article div-->
