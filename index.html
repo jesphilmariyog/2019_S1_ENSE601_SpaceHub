@@ -13,8 +13,8 @@
 
     <!--Header and Navigation Bar for the Homepage-->
     <header>
-
-            <a href="index.html"><img class="logo" src="assets/logo.jpg" alt="SpaceHub Logo"></a>
+        <div class="header-navbar">
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
 
             <!-- This is the navigation elements. Need to add proper webpage links. -->
             <nav>
@@ -31,18 +31,20 @@
                 <input type="text" name="search_term" placeholder="Enter search" value="" required>
                 <input type="submit" value="Search">
             </form>
-
+        </div>
     </header>
 
     <div class="container">
 
         <!--Clock Header-->
-        <div id="clock-wall">
-            <div class="clock" id="Pacific/Auckland"></div>
-            <div class="clock" id="America/New_York"></div>
-            <div class="clock" id="Asia/Tokyo"></div>
-            <div class="clock" id="Pacific/Sydney"></div>
-            <div class="clock" id="Europe/London"></div>
+        <div class="clock-container">
+            <div class="clock-wall">
+                <div class="clock" id="America/New_York"></div>
+                <div class="clock" id="Europe/London"></div>
+                <div class="clock" id="Asia/Tokyo"></div>
+                <div class="clock" id="Pacific/Sydney"></div>
+                <div class="clock" id="Pacific/Auckland"></div>
+            </div>
         </div>
 
         <!--Main content of the home page-->
