@@ -5,16 +5,17 @@ body {
     background: #222;
     font-family: sans-serif;
     font-weight: 300;
-    font-size: 100%; /* To not cause problems with em unit */
+    font-size: 14px; /* To not cause problems with em unit */
 }
 
-.header-navbar {
-    width: 80%;
-    margin: 0 auto;
+.container {
+    margin: 0% 2% 2% 2%;
 }
 
 header {
     background: white;
+    width: 100%;
+    margin: 0 auto;
 }
 
 header::after {
@@ -27,7 +28,7 @@ header::after {
     width: 177.78px;
     height: 100px;
     float: left;
-    padding: 10px 0;
+    padding: 10px 0px;
 }
 
 nav {
@@ -35,15 +36,14 @@ nav {
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
+    margin: 10px 20px 0px 0px; /* top-right-bottom-left */
     list-style: none;
 }
 
 nav li {
     display: inline-block;
-    margin-left: 35px; 
-    padding-top: 50px;
+    margin-left: 10px; 
+    padding-top: 10px;
     position: relative;
 }
 
@@ -74,26 +74,27 @@ nav a:hover::before {
 }
 
 input {
-    /* float: right; */
-    /* margin: 8px 0; */
+    float: right;
+    margin: 8px 0;
 }
 
 input[type=text] {
     box-sizing: border-box;
     border-radius: 5%;
     color: grey;
-    /* padding: 12px 20px; */
-    -webkit-transition: width 0.4s;
-    transition: width 0.4s;
+    -webkit-transition: width 40ms;
+    transition: width 40ms;
 }
 
-input[type=text] :focus {
-    width: 100%;
+#clock-wall {
+    margin: 10px 0;
+    display: flex;
+    align-self: center;
 }
 
 .clock {
-    width: 150px; /* was 300px, then 20% */
-    height: 100px; /* was 100px */
+    padding: 5px 10px 5px 10px;
+    margin: 10px 1% 0px 1%;
     background-color: black;
     border-radius: 5%;
     display: inline-flex;
@@ -101,5 +102,6 @@ input[type=text] :focus {
     justify-content: center;
     color: greenyellow;
     font-family: 'Contrail One', sans-serif;
-    font-size: 2em; /* was 2em, changed to resizable vw */
+    font-size: 1.5em; /* was 2em, changed to resizable vw */
+    white-space: pre;
 }

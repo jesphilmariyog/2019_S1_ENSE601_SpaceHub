@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8" />
-        <title>SpaceHub - central hub for space news, events and updates</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="assets/clock/momentjs.js"></script>
-        <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <title>SpaceHub - your central hub for space news and events</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+</head>
 
-    <body>
-        
-        <!--Header and Navigation Bar for the Homepage-->
-        <header>
-            <div class="header-navbar">
+<body>
 
-                <img class="logo" src="assets/logo.png" alt="SpaceHub Logo">
+    <!--Header and Navigation Bar for the Homepage-->
+    <header>
 
-                <!--This is the navigation elements. Need to add proper webpage links.-->
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </nav>
+            <a href="index.html"><img class="logo" src="assets/logo.jpg" alt="SpaceHub Logo"></a>
 
-                <!--Search field to be put here-->
-                <form> <!--Need to add the action attribute-->
-                    <input type="text" name="search_term" placeholder="Enter search" value="" required>
-                    <!--input type="submit"-->
-                </form>
+            <!-- This is the navigation elements. Need to add proper webpage links. -->
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
 
-            </div>
-        </header>
-        
+            <!--Search field to be put here-->
+            <form> <!--Need to add the action attribute-->
+                <input type="text" name="search_term" placeholder="Enter search" value="" required>
+                <input type="submit" value="Search">
+            </form>
+
+    </header>
+
+    <div class="container">
+
         <!--Clock Header-->
-        <div>
+        <div id="clock-wall">
             <div class="clock" id="Pacific/Auckland"></div>
             <div class="clock" id="America/New_York"></div>
             <div class="clock" id="Asia/Tokyo"></div>
@@ -46,22 +46,29 @@
         </div>
 
         <!--Main content of the home page-->
-        <div> <!--Article div-->
+        <div>
+            <!--Article div-->
             <h2>Articles</h2>
             <p>Article content in this section of the web page.</p>
         </div>
 
-        <div> <!--Calendar Preview div-->
+        <div>
+            <!--Calendar Preview div-->
             <h2>Calendar Preview</h2>
             <p>Calendar preview content in this section of the web page.</p>
         </div>
 
-        <div> <!--Gallery Preview div-->
+        <div>
+            <!--Gallery Preview div-->
             <h2>Gallery Preview</h2>
             <p>Gallery preview content in this section of the web page.</p>
         </div>
-        
-        <script src="clock_script.js"></script>
 
-    </body>
+    </div>
+
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+
+</body>
+
 </html>
