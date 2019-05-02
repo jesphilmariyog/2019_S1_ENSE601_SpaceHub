@@ -2,21 +2,31 @@
 <html>
 
 <head>
+
     <meta charset="utf-8" />
+
     <title>SpaceHub - your central hub for space news and events</title>
+
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JavaScript files for moment.js library-->
     <script src="assets/clock/momentjs.js"></script>
     <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+
+
 </head>
 
 <body>
 
     <!--Header and Navigation Bar for the Homepage-->
     <header>
+
         <div class="header-navbar">
+
             <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
 
-            <!-- This is the navigation elements. Need to add proper webpage links. -->
+            <!--******This is the navigation elements. Need to add proper webpage links.******-->
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -26,42 +36,42 @@
                 </ul>
             </nav>
 
-            <!--Search field to be put here-->
-            <form> <!--Need to add the action attribute-->
-                <input type="text" name="search_term" placeholder="Enter search" value="" required>
-                <input type="submit" value="Search">
-            </form>
+            <!--******This is the search bar. Need to create search operation******-->
+            
+
         </div>
+
     </header>
 
-    <div class="container">
 
-        <!--Clock Header-->
-        <div class="clock-container">
-            <div class="clock-wall">
-                <div class="clock" id="America/New_York"></div>
-                <div class="clock" id="Europe/London"></div>
-                <div class="clock" id="Asia/Tokyo"></div>
-                <div class="clock" id="Pacific/Sydney"></div>
-                <div class="clock" id="Pacific/Auckland"></div>
-            </div>
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Pacific/Sydney"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
         </div>
+    </div>
 
-        <!--Main content of the home page-->
-        <div>
-            <!--Article div-->
+    <!--Main content of the home page-->
+    <div class="main-section-container">
+
+        <!--The article section for the homepage-->
+        <div id="article-section">
             <h2>Articles</h2>
             <p>Article content in this section of the web page.</p>
         </div>
 
-        <div>
-            <!--Calendar Preview div-->
+        <!--The calendar preview section for the homepage-->
+        <div id="calendar-section">
             <h2>Calendar Preview</h2>
             <p>Calendar preview content in this section of the web page.</p>
         </div>
 
-        <div>
-            <!--Gallery Preview div-->
+        <!--The gallery preview section for the homepage-->
+        <div id="gallery-section">
             <h2>Gallery Preview</h2>
             <p>Gallery preview content in this section of the web page.</p>
         </div>
