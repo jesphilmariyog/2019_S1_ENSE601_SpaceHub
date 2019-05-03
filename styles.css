@@ -157,3 +157,38 @@ input[type=text] {
     /* background: gray; */ /* remove this if not required */
     padding: 10px 80px 10px 80px;
 }
+
+#login-info h1 {
+    display: block;
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+
+#login-info input[type=text] {
+    display: inline-block;
+    width: 40%;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 5% 5px 5%;
+    float: none;
+}
+
+#login-info input[type=submit] {
+    display: block;
+    padding: 10px 10px 10px 10px;
+    margin: 5px auto 0 auto;
+    background-color: white;
+    float: none;
+}
+
+#login-nav {
+    float: none;
+    text-align: center;
+    margin: 25px auto 25px auto;
+}
+
+#login-nav button {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 5px 0px 5px;
+    background-color: white;
+}
