@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>SpaceHub</title>
+
+    <!--NOTE: Change the href link to whatever icon you want for the title: eg "icons/spacehub_favicon.png"-->
+    <!-- "og_spacehub_favicon.png" is our original space background from the space hub logo-->
+    <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JavaScript files for moment.js library-->
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+</head>
+
+<body>
+    <!--Header and Navigation Bar for the Homepage-->
+    <header>
+        <div class="header-navbar">
+
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+            <!--******This is the navigation elements. Need to add proper webpage links.******-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+
+            <!--******This is the search bar. Need to create search operation******-->      
+
+        </div>
+    </header>
+
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Pacific/Sydney"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
+        </div>
+    </div>
+
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+
+    <!--Embedded code for the full page calendar view-->
+    <div id="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Pacific%2FAuckland&amp;src=c3BhY2VodWIxOUBnbWFpbC5jb20&amp;color=%23039BE5&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0" style="border-width:0" width="1413" height="620" frameborder="0" scrolling="no"></iframe>
+    </div>
+</body>
+</html>
