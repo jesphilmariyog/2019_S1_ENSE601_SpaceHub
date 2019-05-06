@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceHub - Create Article</title>
+
+    <!--NOTE: Change the href link to whatever icon you want for the title: eg "icons/spacehub_favicon.png"-->
+    <!-- "og_spacehub_favicon.png" is our original space background from the space hub logo-->
+    <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JavaScript files for moment.js library-->
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+
+</head>
+
+<body>
+
+    <!--Header and Navigation Bar for the Homepage-->
+    <header>
+        <div class="header-navbar">
+
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+            <!--******This is the navigation elements. Need to add proper webpage links.******-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+
+            <!--******This is the search bar. Need to create search operation******-->
+
+        </div>
+    </header>
+
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Pacific/Sydney"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
+        </div>
+    </div>
+
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+
+    <div class="create-article-container">
+        <form class="create-article-form" action="articleprocess.php" method="POST">
+            <h2>Create Article</h2>
+            <input type="text" id="article-title" placeholder="Enter title..." name="article-title" required>
+            <input type="text" id="author" placeholder="Enter author name..." name="author" required>
+            <textarea rows="4" cols="50" placeholder="Type your article..." style="width: 99%" name="content" required></textarea>
+            <button type="submit" value="POST">Publish</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

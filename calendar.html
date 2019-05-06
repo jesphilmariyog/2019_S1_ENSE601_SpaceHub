@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>SpaceHub - Calendar</title>
+
+    <!--NOTE: Change the href link to whatever icon you want for the title: eg "icons/spacehub_favicon.png"-->
+    <!-- "og_spacehub_favicon.png" is our original space background from the space hub logo-->
+    <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheet for back to top button -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!--JavaScript files for moment.js library-->
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+
+    <!-- AddEvent script -->
+    <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+
+    <!-- Change "show:true" to "show:false" if you dont want it to display" -->
+    <!-- AddEvent Settings -->
+    <script type="text/javascript">
+    window.addeventasync = function(){
+        addeventatc.settings({
+            appleical  : {show:true, text:"Apple Calendar"},
+            google     : {show:true, text:"Google <em>(online)</em>"},
+            outlook    : {show:true, text:"Outlook"},
+            outlookcom : {show:true, text:"Outlook.com <em>(online)</em>"},
+            yahoo      : {show:true, text:"Yahoo <em>(online)</em>"}
+        });
+    };
+    </script>
+</head>
+
+<body>
+    <!--Header and Navigation Bar for the Homepage-->
+    <header>
+        <div class="header-navbar">
+
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+            <!--******This is the navigation elements. Need to add proper webpage links.******-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+
+            <!--******This is the search bar. Need to create search operation******-->      
+
+        </div>
+    </header>
+
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Asia/Calcutta"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
+        </div>
+    </div>
+
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+
+    <!-- New line for spacing -->
+    <br>
+    
+    <!-- Button code -->
+    <div title="Add to Calendar" class="addeventatc">
+        Add to Calendar        
+        <span class="start"></span>
+        <span class="end"></span>
+        <span class="timezone">Pacific/Auckland</span>
+        <span class="title">Add title</span>
+        <span class="description"></span>
+        <span class="location"></span>
+    </div>
+    
+    <!-- New line for spacing -->
+    <br>
+    <br>
+
+    <!--Embedded code for the full page calendar view-->
+    <div id="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Pacific%2FAuckland&amp;src=c3BhY2VodWIxOUBnbWFpbC5jb20&amp;color=%23039BE5&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0" style="border-width:0" width="100%" height="625" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <footer>
+            &nbsp;
+            <p>Malay Bhagavan &nbsp;<span> | </span>&nbsp; Jesphilmar Iyog &nbsp;<span> | </span>&nbsp; Nishant Patel &nbsp;<span> | </span>&nbsp; Sri Sai Chandan Mangu</p>
+            <p>Copyright © 2019 space-hub.azurewebsites.net</p>
+            <p>All rights reserved</p>
+            &nbsp;
+        </footer>
+    </div>
+
+    <!-- NOTE: COMMENT THE BACK TO TOP IF YOU DONT WANT IT ON THE PAGE -->    
+    <!-- Back to Top -->
+    <!-- <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a> -->
+    
+    <!-- <section></section> --> <!-- Uncomment if required -->        
+</body>
+</html>
