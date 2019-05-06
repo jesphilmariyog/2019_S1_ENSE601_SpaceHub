@@ -79,83 +79,13 @@
             <div class="row">
                 <div class="column">
                     
-                    <!-- <script>
-                        
-                        
-                        var path = require('path');
-                    
-                        var fs = require('fs');
-                        var directoryPath = path.join("/Images/");
-
-                        var galleryImage = new Array(); 
-                        var count = 0; 
-
-
-                        fs.readdir("Images/", function (err, files) {
-                            if(err){
-                                return console.log('Unable to scan: ' + err); 
-                            }
-                                files.forEach(function (files) {
-                                    document.write("Gets to Here");
-                                    galleryImage[count] = "Images/" + files; 
-                                    count++; 
-                                    document.write("count"); 
-                                });
-                        });
-                            
-                        for(var i = 0; i <= count; i++)
-                        {
-                            document.write("HI"); 
-                            document.write('<img src="' + galleryImage[i] + '" style="width: 100%" />');
-                        }
-                        
-                    </script> -->
-
-
-                    <!-- <script type="text/javascript">
-                        for(var i = 0; i<= 4; i++)
-                        {
-                            
-
-                            //var image = document.createElement("img");
-                            var image = document.getElementsByTagName("img"); 
-                            var srcList = [];
-                            for(var k = 0; k < images.length; k++)
-                            {
-                                srcList.push(images[k].src); 
-                            }
-
-                            //image.setAttribute("src", "Images/" + fs); 
-                            //document.querySelector(".gallery").appendChild(image); 
-                            
-
-                        }
-
-                    </script> -->
-                    <!--
-                    <a target="_blank" href="Images/1.jpg" href="Images/5.jpg">
-                    -->
-
-                    <!--                     
-                    <img id="myImg" src="Images/1.jpg" style="width: 100%" alt="image 1">
-                    
-                    <div id="myImage" class="popup">
-                        <span class="close">&times;</span>
-                        <img class="popup-content-image" id="img1">
-                        <div id="caption"></div>
-                    </div> 
-                    -->
-
                     <form method="Fetch Image" action="getImage.php" enctype="multipart/form-data"></form>
 
                     <a target="_blank" href="Images/1.jpg" href="Images/5.jpg">
                         <img src="Images/1.jpg" style="width: 100%">
                         <img src="Images/5.jpg" style="width: 100%">
                     </a>
-
-                    <!--
-                    </a>
-                    -->
+                    
                 </div>
                 <div class="column">
                     <a target="_blank" href="Images/2.jpg">
@@ -198,13 +128,6 @@
            
         </script>
 
-        <!-- <div id="Imageview" class="popup-image">
-            <div class="popup-content-image">
-                <span class="close">&times;</span>
-
-            </div>
-
-        </div> -->
 
         <!-- Image View Section ENDS-->
 
@@ -233,9 +156,7 @@
                     <input type="file" name="file" id="fileToUpload">
                     <textarea id="text" cols="40" rows="4" name="image_text" placeholder="Name of image: "></textarea>
                     <button type="submit" name="submit">Upload Image</button>
-                    <!-- <input type="submit" value="Upload Image" name="Submit"> -->
                 </form>
-                <!-- <span class="close">&times;</span> -->
             </div>
 
         </div>
