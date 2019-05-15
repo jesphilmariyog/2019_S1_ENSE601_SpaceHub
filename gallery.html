@@ -1,192 +1,196 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <head>
-        
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        
-        <title>SpaceHub - Gallery</title>
 
-        <!--NOTE: Change the href link to whatever icon you want for the title: eg "icons/spacehub_favicon.png"-->
-        <!-- "og_spacehub_favicon.png" is our original space background from the space hub logo-->
-        <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+<head>
 
-        
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-        <!--JavaScript files for moment.js library-->
-        <script src="assets/clock/momentjs.js"></script>
-        <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+    <title>SpaceHub - Gallery</title>
 
-        <!-- <script src="/site/wwwroot/assets/clock/momentjs.js"></script>
+    <!--NOTE: Change the href link to whatever icon you want for the title: eg "icons/spacehub_favicon.png"-->
+    <!-- "og_spacehub_favicon.png" is our original space background from the space hub logo-->
+    <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JavaScript files for moment.js library-->
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+
+    <!-- <script src="/site/wwwroot/assets/clock/momentjs.js"></script>
         <script src="/site/wwwroot/assets/clock/moment-timezone-with-data-10-year-range.js"></script> -->
+    <script src="login.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onloadInit" async defer></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    
-        <!-- The Gallery section of website -->
 
-    </head>
 
-    <body>
-        <!-- Preload Images -->
-        <div style="display:none;">
-                <img src="Images/1.jpg" width="1" height="1" border="0" alt="Image 01">
-                <img src="Images/2.jpg" width="1" height="1" border="0" alt="Image 02">
-                <img src="Images/3.jpg" width="1" height="1" border="0" alt="Image 03">
-                <img src="Images/4.jpg" width="1" height="1" border="0" alt="Image 04">
-                <img src="Images/5.jpg" width="1" height="1" border="0" alt="Image 05">
+
+    <!-- The Gallery section of website -->
+
+</head>
+
+<body>
+    <!-- Preload Images -->
+    <div style="display:none;">
+        <img src="Images/1.jpg" width="1" height="1" border="0" alt="Image 01">
+        <img src="Images/2.jpg" width="1" height="1" border="0" alt="Image 02">
+        <img src="Images/3.jpg" width="1" height="1" border="0" alt="Image 03">
+        <img src="Images/4.jpg" width="1" height="1" border="0" alt="Image 04">
+        <img src="Images/5.jpg" width="1" height="1" border="0" alt="Image 05">
+    </div>
+
+    <!--Header and Navigation Bar for the Homepage-->
+    <header>
+        <div class="header-navbar">
+
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+            <!--This is the navigation elements-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li id="login-item"><div id="sign-in"></div></li>
+                </ul>
+            </nav>
+
+            <!--Search field to be put here-->
+
         </div>
+    </header>
 
-        <!--Header and Navigation Bar for the Homepage-->
-        <header>
-            <div class="header-navbar">
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Asia/Calcutta"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
+        </div>
+    </div>
 
-                <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
 
-                <!--This is the navigation elements-->
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="calendar.html">Calendar</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </nav>
 
-                <!--Search field to be put here-->
+    <!-- Image Gallery View Section STARTS-->
+    <div class="imgSec">
+        <div class="row">
+            <div class="column">
+
+                <form method="Fetch Image" action="getImage.php" enctype="multipart/form-data"></form>
+
+                <a target="_blank" href="Images/1.jpg" href="Images/5.jpg">
+                    <img src="Images/1.jpg" style="width: 100%">
+                    <img src="Images/5.jpg" style="width: 100%">
+                </a>
 
             </div>
-        </header>
-        
-        <!--Clock Header-->
-        <div class="clock-container">
-            <div class="clock-wall">
-                <div class="clock" id="America/New_York"></div>
-                <div class="clock" id="Europe/London"></div>
-                <div class="clock" id="Asia/Tokyo"></div>
-                <div class="clock" id="Asia/Calcutta"></div>
-                <div class="clock" id="Pacific/Auckland"></div>
-            </div>
-        </div>
-
-        
-
-        <!-- Image Gallery View Section STARTS-->
-        <div class="imgSec">
-            <div class="row">
-                <div class="column">
-                    
-                    <form method="Fetch Image" action="getImage.php" enctype="multipart/form-data"></form>
-
-                    <a target="_blank" href="Images/1.jpg" href="Images/5.jpg">
-                        <img src="Images/1.jpg" style="width: 100%">
-                        <img src="Images/5.jpg" style="width: 100%">
-                    </a>
-                    
-                </div>
-                <div class="column">
-                    <a target="_blank" href="Images/2.jpg">
+            <div class="column">
+                <a target="_blank" href="Images/2.jpg">
                     <img src="Images/2.jpg" style="width: 100%">
-                    </a>
-                </div>
-                <div class="column">
-                    <a target="_blank" href="Images/3.jpg" href="Images/6.jpg">
+                </a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="Images/3.jpg" href="Images/6.jpg">
                     <img src="Images/3.jpg" style="width: 100%">
                     <img src="Images/6.jpg" style="width: 100%">
-                    </a>
-                </div>
-                <div class="column">
-                    <a target="_blank" href="Images/4.jpg" href="Images/7.jpg">
+                </a>
+            </div>
+            <div class="column">
+                <a target="_blank" href="Images/4.jpg" href="Images/7.jpg">
                     <img src="Images/4.jpg" style="width: 100%">
                     <img src="Images/7.jpg" style="width: 100%">
-                    </a>
-                </div>
-
+                </a>
             </div>
+
         </div>
+    </div>
 
-        <script>
-            var popupimage = document.getElementById('myImage');
-            var img = document.getElementById('myImg');
-            var popupImg = document.getElementById('img1');
-            var captionText = document.getElementById("caption");
-            var span = document.getElementsByClassName("close")[0];
-            img.onclick = function(){
-                popupimage.style.display = "block"; 
-                popupImg.src = this.src; 
-                captionText.innerHTML = this.alt; 
+    <script>
+        var popupimage = document.getElementById('myImage');
+        var img = document.getElementById('myImg');
+        var popupImg = document.getElementById('img1');
+        var captionText = document.getElementById("caption");
+        var span = document.getElementsByClassName("close")[0];
+        img.onclick = function () {
+            popupimage.style.display = "block";
+            popupImg.src = this.src;
+            captionText.innerHTML = this.alt;
 
-                // Closing popup box
-                span.onclick = function() {
+            // Closing popup box
+            span.onclick = function () {
                 popupimage.style.display = "none";
-                }
             }
-            
-           
-        </script>
+        }
 
 
-        <!-- Image View Section ENDS-->
+    </script>
 
-        <!-- Footer -->
-        <div class="footer">
-            <footer>
-                &nbsp;
-                <p>Malay Bhagavan &nbsp;<span> | </span>&nbsp; Jesphilmar Iyog &nbsp;<span> | </span>&nbsp; Nishant Patel &nbsp;<span> | </span>&nbsp; Sri Sai Chandan Mangu</p>
-                <p>Copyright © 2019 space-hub.azurewebsites.net</p>
-                <p>All rights reserved</p>
-                &nbsp;
-            </footer>
+
+    <!-- Image View Section ENDS-->
+
+    <!-- Footer -->
+    <div class="footer">
+        <footer>
+            &nbsp;
+            <p>Malay Bhagavan &nbsp;<span> | </span>&nbsp; Jesphilmar Iyog &nbsp;<span> | </span>&nbsp; Nishant Patel
+                &nbsp;<span> | </span>&nbsp; Sri Sai Chandan Mangu</p>
+            <p>Copyright © 2019 space-hub.azurewebsites.net</p>
+            <p>All rights reserved</p>
+            &nbsp;
+        </footer>
+    </div>
+
+    <!-- Upload button section of the page STARTS-->
+    <button class="upload-button" id="myBtn">Upload Image</button>
+
+    <div id="UploadBtn" class="popup">
+
+        <div class="popup-content">
+            <span class="close">&times;</span>
+
+            <!-- Put content for Uploading images here -->
+            <form method="Upload Image" action="gallery-connect.php" enctype="multipart/form-data">
+                Select image to upload:
+                <input type="file" name="file" id="fileToUpload">
+                <textarea id="text" cols="40" rows="4" name="image_text" placeholder="Name of image: "></textarea>
+                <button type="submit" name="submit">Upload Image</button>
+            </form>
         </div>
 
-        <!-- Upload button section of the page STARTS-->
-        <button class= "upload-button" id="myBtn">Upload Image</button>
-
-        <div id="UploadBtn" class="popup">
-            
-            <div class="popup-content">
-                <span class="close">&times;</span>
-                
-                <!-- Put content for Uploading images here -->
-                <form method="Upload Image" action="gallery-connect.php" enctype="multipart/form-data">
-                    Select image to upload: 
-                    <input type="file" name="file" id="fileToUpload">
-                    <textarea id="text" cols="40" rows="4" name="image_text" placeholder="Name of image: "></textarea>
-                    <button type="submit" name="submit">Upload Image</button>
-                </form>
-            </div>
-
-        </div>
+    </div>
 
 
-        <script>
-            var popup = document.getElementById('UploadBtn');
-            var btn = document.getElementById("myBtn");
-            var span = document.getElementsByClassName("close")[0]; 
+    <script>
+        var popup = document.getElementById('UploadBtn');
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
 
-            btn.onclick = function() {
-                popup.style.display = "block"; 
+        btn.onclick = function () {
+            popup.style.display = "block";
+        }
+
+        span.onclick = function () {
+            popup.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == popup) {
+                popup.style.display = "none";
             }
+        }
+    </script>
+    <!-- Upload button section of the page ENDS-->
 
-            span.onclick = function() {
-                popup.style.display = "none"; 
-            }
 
-            window.onclick = function(event) {
-                if(event.target == popup){
-                    popup.style.display = "none"; 
-                }
-            }
-        </script>
-        <!-- Upload button section of the page ENDS-->
 
-        
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+</body>
 
-        <!--Updates the clock view-->
-      <script src="clock_script.js"></script>
-    </body>
-    
 </html>
