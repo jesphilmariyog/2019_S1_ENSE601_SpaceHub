@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>SpaceHub - Calendar</title>
+
+    <!-- Website Favicon -->
+    <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+
+    <!-- Stylesheet for the CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Stylesheet for fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheet for back to top button -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!--JavaScript files for moment.js library-->
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+
+    <!--Necessary for Google Sign-In API-->
+    <script src="login.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onloadInit" async defer></script>
+
+    <!-- Space Background -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+</head>
+
+<body>
+    <!--Header and Navigation Bar-->
+    <header>
+        <div class="header-navbar">
+
+            <!-- SpaceHub logo -->
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+            <!--Navigation elements with webpage links-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="discussion.html">Discussion</a></li>
+                    <li><a href="lightPollutionMap.html">Light Pollution Map</a></li>
+                    <li id="login-item"><div id="sign-in"></div></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Pacific/Sydney"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
+        </div>
+    </div>
+
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+
+    <!-- New lines for spacing -->
+    <br>
+    <br>
+        
+    <!-- Add to Calendar Buttons -->
+    <div id="add-to-calendar">
+
+        <!-- Download .ics file for Apple Calendar -->        
+        <a href="newscalyear_ical_original.ics" class="button"><i id="apple-logo" class="fab fa-apple"></i> Add to Apple&nbsp;&nbsp;</a>
+
+        <!-- Add to Google Calendar -->
+        <a href="https://calendar.google.com/calendar/r/eventedit?text=Title+of+the+event&dates=20190615T090000Z/20190615T110000Z&details=Description+of+the+event&location=Location+of+the+event" target="_blank" class="button"><i id="google-logo" class="fab fa-google"></i> Add to Google&nbsp;&nbsp;</a>
+
+        <!-- Download .ics file for Outlook Calendar -->        
+        <a href="newscalyear_ical_original.ics" class="button"><i id="microsoft-logo" class="fab fa-microsoft"></i> Add to Outlook&nbsp;&nbsp;</a>
+
+        <!-- Add to Yahoo Calendar -->
+        <a href="https://calendar.yahoo.com/?v=60&view=d&type=20&title=Title+of+the+event&st=20190615T090000&et=20190615T110000&desc=Description+of+the+event&in_loc=Location+of+the+event" target="_blank" class="button"><i id="yahoo-logo" class="fab fa-yahoo"></i> Add to Yahoo&nbsp;&nbsp;</a>
+
+    </div>
+      
+    <!-- New lines for spacing -->
+    <br>
+    <br>
+    
+    <!--Embedded code for the full page calendar view-->
+    <div id="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Pacific%2FAuckland&amp;src=c3BhY2VodWIxOUBnbWFpbC5jb20&amp;color=%23039BE5&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0" style="border-width:0" width="100%" height="625" frameborder="0" scrolling="no"></iframe>
+    </div>
+    
+    <!-- Note for importing events -->
+    <div class="note">
+        <p>Note: To import space events to any calendar, download the file from <a href="newscalyear_ical_original.ics">here</a></p>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <footer>            
+            <p>Malay Bhagavan &nbsp;<span> | </span>&nbsp; Jesphilmar Iyog &nbsp;<span> | </span>&nbsp; Nishant Patel &nbsp;<span> | </span>&nbsp; Sri Sai Chandan Mangu</p>
+            <p>Copyright © 2019 space-hub.azurewebsites.net</p>
+            <p>All rights reserved</p>
+        </footer>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>SpaceHub - Create Thread</title>
+ 
+    <!-- Website Favicon -->
+    <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+
+    <!-- Stylesheet for the CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Stylesheet for fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheet for back to top button -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!--JavaScript files for moment.js library-->
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+
+    <!--Necessary for Google Sign-In API-->
+    <script src="login.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onloadInit" async defer></script>
+
+    <!-- Stylesheet to load files automatically -->
+    <script src="ajax.js"></script>
+
+    <!-- Setting initial format for window size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Space Background -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+</head>
+
+<body>
+    <!--Header and Navigation Bar-->
+    <header>
+        <div class="header-navbar">
+
+            <!-- SpaceHub logo -->
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+            <!--Navigation elements with webpage links-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="discussion.html">Discussion</a></li>
+                    <li><a href="lightPollutionMap.html">Light Pollution Map</a></li>
+                    <li id="login-item"><div id="sign-in"></div></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Asia/Calcutta"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
+        </div>
+    </div>
+
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+
+    <!-- New line for spacing -->
+    <br>
+
+    <!-- Create Thread Section -->
+    <div class="discussion-section-container">
+        <div class="discussion-header">
+            <h2 id="h2-create-discussion">Create Thread</h2>
+        </div>
+        <div class="thread-form">
+            <form id="thread-formform" action="createthreadprocess.php" method="POST" enctype="multipart/form-data">
+                <input name="threadTitle" type="text" id="title-input" placeholder="Enter title of thread..." required/><br>
+                <textarea name="threadContent" id="thread-content-textarea" placeholder="Type thread content..." required></textarea>
+                <input type="submit" id="thread-submit-btn" value="Post"/>
+            </form>
+        </div>
+        <div id="threadConfirmation"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <footer>       
+            <p>Malay Bhagavan &nbsp;<span> | </span>&nbsp; Jesphilmar Iyog &nbsp;<span> | </span>&nbsp; Nishant Patel &nbsp;<span> | </span>&nbsp; Sri Sai Chandan Mangu</p>
+            <p>Copyright © 2019 space-hub.azurewebsites.net</p>
+            <p>All rights reserved</p>            
+        </footer>
+    </div>
+</body>
+</html>

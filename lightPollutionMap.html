@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        
+        <title>SpaceHub - Light Pollution Map</title>
+
+        <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--JavaScript files for moment.js library-->
+        <script src="assets/clock/momentjs.js"></script>
+        <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+        
+
+        <!--Necessary for Google Sign-In API-->
+        <script src="login.js"></script>
+        <script src="https://apis.google.com/js/platform.js?onload=onloadInit" async defer></script>   
+        
+        <script src="ajax.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- SPACE BACKGROUND -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+
+    </head>
+
+    <body onload="setArticleFeed('getImage.php', 'images'); return false;">
+
+        <!--Header and Navigation Bar for the Homepage-->
+        <header>
+            <div class="header-navbar">
+
+                <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+                <!-- This is the navigation elements  -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="calendar.html">Calendar</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="discussion.html">Discussion</a></li>
+                        <li><a href="lightPollutionMap.html">Light Pollution Map</a></li>
+                        <li id="login-item"><div id="sign-in"></div></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!--Clock Header-->
+        <div class="clock-container">
+            <div class="clock-wall">
+                <div class="clock" id="America/New_York"></div>
+                <div class="clock" id="Europe/London"></div>
+                <div class="clock" id="Asia/Tokyo"></div>
+                <div class="clock" id="Asia/Calcutta"></div>
+                <div class="clock" id="Pacific/Auckland"></div>
+            </div>
+        </div>
+
+    </br>
+
+        <div class="map-container">
+            <iframe src="https://www.lightpollutionmap.info/#zoom=4&lat=5759860&lon=1619364&layers=B0FFFFFTFFFF" height="100%" width="100%" frameBorder="0"></iframe>
+        </div>
+        <h6>Credit: Jurij Stare, www.lightpollutionmap.info</h6>
+
+        <!-- Footer -->
+        <div class="footer">
+            <footer>
+                <p>Malay Bhagavan &nbsp;<span> | </span>&nbsp; Jesphilmar Iyog &nbsp;<span> | </span>&nbsp; Nishant Patel &nbsp;<span> | </span>&nbsp; Sri Sai Chandan Mangu</p>
+                <p>Copyright © 2019 space-hub.azurewebsites.net</p>
+                <p>All rights reserved</p>
+            </footer>
+        </div>
+
+        <!--Updates the clock view-->
+        <script src="clock_script.js"></script>
+    </body>
+</html>

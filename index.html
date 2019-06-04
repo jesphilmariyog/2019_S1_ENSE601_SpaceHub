@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>SpaceHub</title>
+
+    <!-- Website Favicon -->
+    <link rel="icon" type="image/png" href="icons/spacehub_favicon1.png">
+
+    <!-- Stylesheet for the CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Stylesheet for fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Stylesheet for back to top button -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!--JavaScript files for moment.js library-->
+    <script src="assets/clock/momentjs.js"></script>
+    <script src="assets/clock/moment-timezone-with-data-10-year-range.js"></script>
+
+    <!--Necessary for Google Sign-In API-->
+    <script src="login.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onloadInit" async defer></script>   
+    
+    <!-- Stylesheet to load files automatically -->
+    <script src="ajax.js"></script>
+
+    <!-- Setting initial format for window size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- Space Background -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+</head>
+
+<body onload="setArticleFeed('articlefeedprocess.php', 'article-feed', 'getImage-preview.php', 'gallery-section'); return false;">
+
+    <!--Header and Navigation Bar-->
+    <header>
+        <div class="header-navbar">
+
+            <!-- SpaceHub logo -->
+            <a href="index.html"><img class="logo" src="assets/logo.png" alt="SpaceHub Logo"></a>
+
+            <!--Navigation elements with webpage links-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="discussion.html">Discussion</a></li>
+                    <li><a href="lightPollutionMap.html">Light Pollution Map</a></li>
+                    <li id="login-item"><div id="sign-in"></div></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Clock Header-->
+    <div class="clock-container">
+        <div class="clock-wall">
+            <div class="clock" id="America/New_York"></div>
+            <div class="clock" id="Europe/London"></div>
+            <div class="clock" id="Asia/Tokyo"></div>
+            <div class="clock" id="Asia/Calcutta"></div>
+            <div class="clock" id="Pacific/Auckland"></div>
+        </div>
+    </div>
+
+    <!--Updates the clock view-->
+    <script src="clock_script.js"></script>
+
+    <!-- New line for spacing -->
+    <br>
+
+    <!-- Weather Overview -->
+    <div class="weather-overview">       
+        <a class="weatherwidget-io" href="https://forecast7.com/en/n36d85174d76/auckland/" data-label_1="AUCKLAND" data-label_2="WEATHER" data-icons="Climacons Animated" data-textcolor="#ffffff" data-highcolor="#dc2b2b" data-lowcolor="#1279c2" data-suncolor="#f98629" data-mooncolor="#878686" data-cloudcolor="#878686" data-cloudfill="#f9f7f7" data-raincolor="#1279c2" data-snowcolor="#2acccc" >AUCKLAND WEATHER</a>
+        <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+        </script>
+    </div>
+
+    <!-- New line for spacing -->
+    <br>
+
+    <!--Main content of the homepage-->
+    <div class="main-section-container">
+
+        <!--The calendar preview section for the homepage-->
+        <div id="calendar-section">
+            <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Pacific%2FAuckland&amp;src=c3BhY2VodWIxOUBnbWFpbC5jb20&amp;color=%23039BE5&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;showTitle=0&amp;showCalendars=0" style="border-width:0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <!--The gallery preview section for the homepage-->
+        <div id="gallery-section">
+            <div class="slideshow-container" id="gallery-slide">  
+                <form method="POST" action="getImage-preview.php" enctype="multipart/form-data"></form>
+            </div>
+        </div>  
+
+        <!--The article section for the homepage-->
+        <div id="article-section">
+            <div id="article-container">
+                <div id="top-article-sec">
+                    <h2>Articles</h2>
+                    <a id="create-article-btn" href="create-article.html">Create Article</a>
+                </div>
+                <div id="article-feed"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New lines for spacing -->
+    <br>
+    <br>
+    <br>
+    <br>    
+
+     <!-- Footer -->
+     <div class="footer">
+        <footer>                  
+            <p>Malay Bhagavan &nbsp;<span> | </span>&nbsp; Jesphilmar Iyog &nbsp;<span> | </span>&nbsp; Nishant Patel &nbsp;<span> | </span>&nbsp; Sri Sai Chandan Mangu</p>
+            <p>Copyright © 2019 space-hub.azurewebsites.net</p>
+            <p>All rights reserved</p>            
+        </footer>
+    </div>
+</body>
+</html>
